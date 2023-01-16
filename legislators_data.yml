@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://cdn.raw-labs.com/endpoint-schemaV0.9.json
+raw: 0.9
+endpoint: GET
+code: rql
+codeFile: legislators_data.rql
+format: json
+computeClass: normal
+enabled: true
+cacheSizeMB: 200
+computeLimitSeconds: 10
+declaration: legislators_data
+metadata:
+  title: Legislators data query
+  description: querying legistlators data
+  tags:
+    - datasource
+security:
+  public: true
+refreshSeconds: 10
