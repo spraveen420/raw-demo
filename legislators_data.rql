@@ -1,9 +1,9 @@
 legislators_data(state: string := "%", type: string := "%", district: int := 100) := {
- SELECT * FROM READ("https://theunitedstates.io/congress-legislators/legislators-current.csv") as l
+ SELECT * FROM READ("https://theunitedstates.io/congress-legislators/legislators-current.json") as l
  WHERE
-  l.state like state AND
-  l.type like type AND
-  l.district < district
- order by l.district
+  l.terms.state like state AND
+  l.terms.type like type AND
+  l.terms.district < district
+ order by l.terms.district
  LIMIT 10
 }
